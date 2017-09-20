@@ -4,14 +4,28 @@
 
 @if (Model.IsCurrentNode && Model.SourceMetadata["HtmlHelper"].ToString() != "MvcSiteMapProvider.Web.Html.MenuHelper")  { 
     <text>@Model.Title</text>
-} else if (Model.IsClickable) { 
+} else if (Model.IsClickable) {
     if (string.IsNullOrEmpty(Model.Description))
     {
-        <a href="@Model.Url">@Model.Title</a>
+        if (Model.IsCurrentNode)
+        {
+        <a href="@Model.Url" class="nav-link active">@Model.Title</a>
+        }
+        else
+        {
+            <a href="@Model.Url" class="nav-link">@Model.Title</a>
+        }
     }
     else
     {
-        <a href="@Model.Url" title="@Model.Description">@Model.Title</a>
+        if (Model.IsCurrentNode)
+        {
+            <a href="@Model.Url" class="nav-link active" title="@Model.Description">@Model.Title</a>
+        }
+        else
+        {
+            <a href="@Model.Url" class="nav-link" title="@Model.Description">@Model.Title</a>
+        }
     }
 } else { 
     <text>@Model.Title</text>

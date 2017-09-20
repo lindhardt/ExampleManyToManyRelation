@@ -3,12 +3,23 @@
 @using System.Linq
 @using MvcSiteMapProvider.Web.Html.Models
 
-
-
-@foreach (var node in Model) { 
-    @Html.DisplayFor(m => node);
-    
-    if (node != Model.Last()) {
-        <text> &gt; </text>
+<ul class="breadcrumb" style="margin-bottom:0px;margin-top:0px">
+    @foreach (var node in Model)
+    {
+        if (node.IsCurrentNode)
+        {
+            <li class="breadcrumb-item active">@node.Title</li>
+        }
+        else
+        {
+            <li class="breadcrumb-item">
+                @if (string.IsNullOrEmpty(node.Description))
+                {
+                <a href="@node.Url">@node.Title</a>
+                } else {
+                <a href="@node.Url" title="@node.Description">@node.Title</a>
+                }
+            </li>
+        }
     }
-}
+</ul>
