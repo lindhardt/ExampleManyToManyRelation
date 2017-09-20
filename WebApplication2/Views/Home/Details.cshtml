@@ -1,33 +1,28 @@
 ﻿@model IEnumerable<WebApplication2.Models.Role>
 
 @{
-    Layout = null;
+
+    @ViewBag.Title = "Details";
+
 }
 
-<!DOCTYPE html>
+<h2>@ViewBag.MemberName</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details for @ViewBag.MemberName</title>
-</head>
-<body>
-    <h2>@ViewBag.MemberName</h2>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -36,13 +31,10 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.RoleID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.RoleID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.RoleID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.RoleID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RoleID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RoleID })
             </td>
         </tr>
     }
-    
-    </table>
-</body>
-</html>
+</table>

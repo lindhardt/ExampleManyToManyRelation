@@ -1073,7 +1073,7 @@ pre {
     color: #fff;
     background-color: #007bff; }
   .custom-control-input:focus ~ .custom-control-indicator {
-    box-shadow: 0 0 0 1px lightgray, 0 0 0 3px #007bff; }
+    box-shadow: 0 0 0 1px #e9ecef, 0 0 0 3px #007bff; }
   .custom-control-input:active ~ .custom-control-indicator {
     color: #fff;
     background-color: #b3d7ff; }
@@ -2009,7 +2009,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: lightgray;
+  background-color: #e9ecef;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out;
@@ -2478,8 +2478,8 @@ button.list-group-item-dark {
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     color: #495057;
-    background-color: lightgray;
-    border-color: #ddd #ddd lightgray; }
+    background-color: #e9ecef;
+    border-color: #ddd #ddd #e9ecef; }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
@@ -3069,7 +3069,7 @@ body {
   line-height: 1.5;
   color: #292b2c;
   text-align: left;
-  background-color: lightgray; }
+  background-color: #e9ecef; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -3326,7 +3326,7 @@ template {
   .table tbody + tbody {
     border-top: 2px solid #e9ecef; }
   .table .table {
-    background-color: lightgray; }
+    background-color: #e9ecef; }
 
 .table-sm th,
 .table-sm td {
@@ -3447,7 +3447,7 @@ template {
     background-color: rgba(0, 0, 0, 0.075); }
 
 .thead-inverse th {
-  color: lightgray;
+  color: #e9ecef;
   background-color: #212529; }
 
 .thead-default th {
@@ -3455,7 +3455,7 @@ template {
   background-color: #e9ecef; }
 
 .table-inverse {
-  color: lightgray;
+  color: #e9ecef;
   background-color: #212529; }
   .table-inverse th,
   .table-inverse td,
