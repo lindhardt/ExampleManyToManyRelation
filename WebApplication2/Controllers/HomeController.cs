@@ -25,5 +25,10 @@ namespace WebApplication2.Controllers
 
             return View(member.Roles.AsEnumerable());
         }
+
+        public ActionResult About()
+        {
+            return View("About");
+        }
     }
 }
